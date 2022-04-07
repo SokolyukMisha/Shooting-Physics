@@ -1,36 +1,41 @@
 %YAML 1.1
 %TAG !u! tag:unity3d.com,2011:
---- !u!1 &1508033807598565173
-GameObject:
+--- !u!114 &3819684331414958278
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 4005523589932002272}
-  m_Layer: 0
-  m_Name: CameraRotation
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &4005523589932002272
-Transform:
+  m_GameObject: {fileID: 3163019433815965519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 13fd43d15abb3e541820197afac6be18, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  damage: 20
+  range: 100
+  fireRate: 15
+  canvas: {fileID: 0}
+  fpsCam: {fileID: 3819684329865635454}
+  muzzelFlash: {fileID: 6557929002149838223}
+  hitEffect: {fileID: 100000, guid: 14c0bb7df2abebe40809248b2039011a, type: 3}
+--- !u!114 &3819684331414958279
+MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1508033807598565173}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0.6, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children:
-  - {fileID: 1889709893552760591}
-  m_Father: {fileID: 3819684329867245692}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_GameObject: {fileID: 3163019433815965519}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 27d62bc1765e86b409809dce5cc04e26, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  fpsCam: {fileID: 3819684329865635454}
+  zoomedOut: 60
+  zoomedIn: 20
+  zoomedInSensitivity: 0.5
+  zoomedOutSensitivity: 2
 --- !u!1 &3355210493152292354
 GameObject:
   m_ObjectHideFlags: 0
@@ -107,7 +112,7 @@ Transform:
   m_LocalPosition: {x: 0.08, y: 4.04, z: 24.89}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
-  - {fileID: 4005523589932002272}
+  - {fileID: 1889709893552760591}
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -378,42 +383,6 @@ Behaviour:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3819684329867142234}
   m_Enabled: 1
---- !u!114 &3819684331414958279
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3163019433815965519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 27d62bc1765e86b409809dce5cc04e26, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  fpsCam: {fileID: 3819684329865635454}
-  zoomedOut: 60
-  zoomedIn: 20
-  zoomedInSensitivity: 0.5
-  zoomedOutSensitivity: 2
---- !u!114 &3819684331414958278
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3163019433815965519}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 13fd43d15abb3e541820197afac6be18, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  damage: 20
-  range: 100
-  fireRate: 15
-  canvas: {fileID: 0}
-  fpsCam: {fileID: 3819684329865635454}
-  muzzelFlash: {fileID: 6557929002149838223}
-  hitEffect: {fileID: 100000, guid: 14c0bb7df2abebe40809248b2039011a, type: 3}
 --- !u!120 &3819684331522342047
 LineRenderer:
   m_ObjectHideFlags: 0
@@ -570,12 +539,12 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4533954955514380515}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalRotation: {x: 0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0.5999999, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 3819684329867245694}
-  m_Father: {fileID: 4005523589932002272}
+  m_Father: {fileID: 3819684329867245692}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &7171827277465569257

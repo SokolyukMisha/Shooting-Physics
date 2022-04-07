@@ -3,10 +3,10 @@ using UnityEngine;
 public class Recoil : MonoBehaviour
 {
     WeaponZoom weaponZoom;
-    private bool isAiming;
+    bool isAiming;
 
-    private Vector3 currentRotation;
-    private Vector3 targetRotation;
+    Vector3 currentRotation;
+    Vector3 targetRotation;
 
     [SerializeField] float recoilX, recoilY, recoilZ;
 
@@ -17,7 +17,6 @@ public class Recoil : MonoBehaviour
     void Start()
     {
         weaponZoom = GetComponentInChildren<WeaponZoom>();
-        Debug.Log(weaponZoom);
     }
 
     void Update()

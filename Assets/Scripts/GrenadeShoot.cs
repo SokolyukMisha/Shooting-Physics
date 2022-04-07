@@ -1,16 +1,15 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class GrenadeShoot : MonoBehaviour
 {
 
-    [SerializeField] GameObject bullet;
-    public GameObject shootPoint;
+    [SerializeField] GameObject bullet;    
     [SerializeField] ParticleSystem muzzelFlash;
-    private Recoil recoil;
+
+    Recoil recoil;
 
     public float blastPower;
+    public GameObject shootPoint;
 
     private void Start()
     {

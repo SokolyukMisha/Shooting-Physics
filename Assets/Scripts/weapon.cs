@@ -1,7 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
-using TMPro;
 using UnityEngine;
 
 public class weapon : MonoBehaviour
@@ -19,8 +15,10 @@ public class weapon : MonoBehaviour
     private float nextTimeToFire = 0f;
     private void OnEnable()
     {
-        canvas.gameObject.SetActive(true);
+        EnableAim(true);
     }
+
+
     private void Start()
     {
         recoil = transform.GetComponentInParent(typeof(Recoil)) as Recoil;
@@ -48,7 +46,16 @@ public class weapon : MonoBehaviour
                 target.TakeDamage(damage);
             }
            GameObject impact = Instantiate(hitEffect, hit.point, Quaternion.FromToRotation(Vector3.up, hit.normal));
+            impact.transform.parent = hit.transform;
            Destroy(impact, 15f);
         }
+    }
+    public void EnableAim(bool var)
+    {
+        canvas.gameObject.SetActive(var);
+    }
+    private void OnDisable()
+    {
+         EnableAim(false);
     }
 }

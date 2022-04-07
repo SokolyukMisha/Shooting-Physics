@@ -1,26 +1,20 @@
-using System;
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class GrenadeAim : MonoBehaviour
 {
-    [SerializeField] Canvas canvas;
-    LineRenderer lineRenderer;
-    GrenadeShoot grenadeShoot;
-    public int numPoints = 50;
-    public float timeBetweenPoints = 0.1f;
-    public LayerMask CollidableLayers;
+    [SerializeField] int numPoints = 50;
+    [SerializeField] float timeBetweenPoints = 0.1f;
 
-    private void OnEnable()
-    {
-        canvas.gameObject.SetActive(false);
-    }
+    LineRenderer lineRenderer;
+    GrenadeShoot grenadeShoot;   
+    LayerMask CollidableLayers;
+
 
     void Start()
     {
         lineRenderer = GetComponent<LineRenderer>();
-        grenadeShoot = GetComponent<GrenadeShoot>();
+        grenadeShoot = GetComponent<GrenadeShoot>();      
     }
 
 
